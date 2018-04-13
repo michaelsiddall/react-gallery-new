@@ -26,7 +26,7 @@ Between the server and client, you'll need two terminal tabs! Because we're usin
 - Use `axios` to retrieve (`GET`) data from to `/gallery` and store it in `App.js`.
 - Create a new **component** for the `GalleryList`.
 - Create a new **component** called `GalleryItem.js` and pass it the individual gallery items via `props`. 
-- Display all of the images on the screen along with the title.
+- Display all of the images on the screen.
 - Swap the image with the description on click.
 - Display the number likes for each item and include a like button.
 - When the like button is clicked, use `Axios` to update (`PUT`) the like count `/gallery/like/:id`.
