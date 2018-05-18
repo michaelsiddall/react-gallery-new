@@ -44,7 +44,7 @@ Between the server and client, you'll need two terminal tabs! Because we're usin
 
 **Do not start on stretch goals until ALL of base mode is complete. Some of these will require additional research.**
 
-- Add styling with Material-UI [https://material-ui-next.com/](https://material-ui-next.com/)
+- Add styling with Material-UI [https://material-ui.com/](https://material-ui.com/)
 - Move the data into a database (either mongo or postgresql)
 - Add a form (new **compontent**) that allows a user to POST a new gallery item
   - Client side form (use absolute URL for images)
