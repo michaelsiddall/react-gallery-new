@@ -1,6 +1,6 @@
-var express = require('express');
-var router = express.Router();
-var galleryItems = require('../modules/gallery.data');
+const express = require('express');
+const router = express.Router();
+const galleryItems = require('../modules/gallery.data');
 
 // DO NOT MODIFY THIS FILE FOR BASE MODE
 
