@@ -5,7 +5,7 @@ const galleryItems = require('../modules/gallery.data');
 // DO NOT MODIFY THIS FILE FOR BASE MODE
 
 // PUT Route
-router.put('/like/:id', function (req, res) {
+router.put('/like/:id', (req, res) => {
     console.log(req.params);
     const galleryId = req.params.id;
     for(const galleryItem of galleryItems) {
@@ -17,7 +17,7 @@ router.put('/like/:id', function (req, res) {
 }); // END PUT Route
 
 // GET Route
-router.get('/', function (req, res) {
+router.get('/', (req, res) => {
     res.send(galleryItems);
 }); // END GET Route
 
