@@ -21,16 +21,26 @@ npm run client
 
 Between the server and client, you'll need two terminal tabs! Because we're using `nodemon`, both our client side and server side will automatically spin back up when changes are made!
 
+## Git Branching
+For each `feature` of your application, you will need to make a branch, work on the branch, and then merge it into master with `git merge --no-ff`. In the Base Mode section, each of the tasks has an associated branch name.
+
+
 ## BASE MODE
 
-- Use `axios` to retrieve (`GET`) data from to `/gallery` and store it in `App.js`.
-- Create a new **component** for the `GalleryList`.
-- Create a new **component** called `GalleryItem.js` and pass it the individual gallery items via `props`. 
-- Display all of the images on the screen.
-- Swap the image with the description on click. Research [conditional rendering](https://reactjs.org/docs/conditional-rendering.html).
-- Display the number likes for each item and include a like button.
-- When the like button is clicked, use `Axios` to update (`PUT`) the like count `/gallery/like/:id`.
-- Update the gallery each time a like button is clicked.
+- `feature-get-gallery` 
+    - Use `axios` to retrieve (`GET`) data from to `/gallery` and store it in `App.js`.
+- `feature-component-gallery-list` 
+    - Create a new **component** for the `GalleryList` and pass it the gallery data stored in `App` via `props`.
+    - Break apart the list of gallery data
+- `feature-component-gallery-item` 
+    - Create a new **component** called `GalleryItem.js` and pass it the individual gallery item via `props`. 
+    - Display all of the images on the screen.
+- `feature-image-swap` 
+    - Swap the image with the description on click. Research [conditional rendering](https://reactjs.org/docs/conditional-rendering.html).
+- `feature-like-couter` 
+    - Display the number likes for each item and include a like button.
+    - When the like button is clicked, use `Axios` to update (`PUT`) the like count `/gallery/like/:id`.
+    - Update the gallery each time a like button is clicked.
 
 ### Wireframes
 
