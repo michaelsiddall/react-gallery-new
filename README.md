@@ -22,7 +22,7 @@ npm run client
 Between the server and client, you'll need two terminal tabs! Because we're using `nodemon`, both our client side and server side will automatically spin back up when changes are made!
 
 ## Git Branching
-For each `feature` of your application, you will need to make a branch, work on the branch, and then merge it into master with `git merge --no-ff`. In the Base Mode section, each of the tasks has an associated branch name.
+For each `feature` of your application, you will need to make a branch, work on the branch, and then merge it into master with `git merge --no-ff`. In the Base Mode section, each of the tasks has an associated branch name. These are suggested branches and order. Feel free to work on the features in any order you like. You should be making branches for whatever feature you are working on.
 
 
 ## BASE MODE
@@ -37,7 +37,7 @@ For each `feature` of your application, you will need to make a branch, work on 
     - Display all of the images on the screen.
 - `feature-image-swap` 
     - Swap the image with the description on click. Research [conditional rendering](https://reactjs.org/docs/conditional-rendering.html).
-- `feature-like-couter` 
+- `feature-like-counter` 
     - Display the number likes for each item and include a like button.
     - When the like button is clicked, use `Axios` to update (`PUT`) the like count `/gallery/like/:id`.
     - Update the gallery each time a like button is clicked.
@@ -56,7 +56,7 @@ For each `feature` of your application, you will need to make a branch, work on 
 
 
 - Move the data into a database (postgresql)
-- Add a form (new **compontent**) that allows a user to POST a new gallery item
+- Add a form (new **component**) that allows a user to POST a new gallery item
   - Client side form (use absolute URL for images)
   - Server side route for posting an image
 - Ability to delete a gallery item
