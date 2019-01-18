@@ -21,25 +21,15 @@ npm run client
 
 Between the server and client, you'll need two terminal tabs! Because we're using `nodemon`, both our client side and server side will automatically spin back up when changes are made!
 
-## Git Branching
-For each `feature` of your application, you will need to make a branch, work on the branch, and then merge it into master with `git merge --no-ff`. In the Base Mode section, each of the tasks has an associated branch name. These are suggested branches and order. Feel free to work on the features in any order you like. You should be making branches for whatever feature you are working on.
-
-
 ## BASE MODE
-
-- `feature-get-gallery` 
-    - Use `axios` to retrieve (`GET`) data from to `/gallery` and store it in `App.js`.
-- `feature-component-gallery-list` 
-    - Create a new **component** for the `GalleryList` and pass it the gallery data stored in `App` via `props`.
+- Use `axios` to retrieve (`GET`) data from to `/gallery` and store it in `App.js`.
+- Create a new **component** for the `GalleryList` and pass it the gallery data stored in `App` via `props`.
     - Break apart the list of gallery data
-- `feature-component-gallery-item` 
-    - Create a new **component** called `GalleryItem.js` and pass it the individual gallery item via `props`. 
+- Create a new **component** called `GalleryItem.js` and pass it the individual gallery item via `props`. 
     - Display all of the images on the screen.
-- `feature-image-swap` 
-    - Swap the image with the description on click. Research [conditional rendering](https://reactjs.org/docs/conditional-rendering.html).
-- `feature-like-counter` 
-    - Display the number likes for each item and include a like button.
-    - When the like button is clicked, use `Axios` to update (`PUT`) the like count `/gallery/like/:id`.
+- Swap the image with the description on click. Research [conditional rendering](https://reactjs.org/docs/conditional-rendering.html).
+- Display the number likes for each item and include a like button.
+- When the like button is clicked, use `Axios` to update (`PUT`) the like count `/gallery/like/:id`.
     - Update the gallery each time a like button is clicked.
 
 ### Wireframes
@@ -51,6 +41,10 @@ For each `feature` of your application, you will need to make a branch, work on 
 ![mockup two](wireframes/second-mockup.png)
 
 ## STRETCH GOALS
+
+## Git Branching
+
+For each `feature` of your application, make a branch, work on the branch, and then merge it into master with `git merge --no-ff`. Feel free to work on the features in any order you like. You should be making branches for whatever feature you are working on.
 
 **Do not start on stretch goals until ALL of base mode is complete. Some of these will require additional research.**
 
