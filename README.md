@@ -22,15 +22,14 @@ npm run client
 Between the server and client, you'll need two terminal tabs! Because we're using `nodemon`, both our client side and server side will automatically spin back up when changes are made!
 
 ## BASE MODE
-- Use `axios` to retrieve (`GET`) data from to `/gallery` and store it in `App.js`.
-- Create a new **component** for the `GalleryList` and pass it the gallery data stored in `App` via `props`.
-    - Break apart the list of gallery data
-- Create a new **component** called `GalleryItem.js` and pass it the individual gallery item via `props`. 
-    - Display all of the images on the screen.
-- Swap the image with the description on click. Research [conditional rendering](https://reactjs.org/docs/conditional-rendering.html).
-- Display the number likes for each item and include a like button.
-- When the like button is clicked, use `Axios` to update (`PUT`) the like count `/gallery/like/:id`.
-    - Update the gallery each time a like button is clicked.
+
+For this project you will create a gallery page to share pictures of things that are important to you. Visitors can click on an image to see a description and use a button to "like" an image. 
+
+To practice passing values through `props` in React, you will build the gallery using mulitple components - an `App`, `GalleryList`, and `GalleryItem`.
+
+- `App` - will represent the overall application or site 
+- `GalleryList` - will represent the gallery of images. By componentizing, we could reused this component in different applications
+- `GalleryItem` - will represent a single image in the gallery with the behaviors to click the image to view a description and the ability to like an image.
 
 ### Wireframes
 
@@ -40,14 +39,29 @@ Between the server and client, you'll need two terminal tabs! Because we're usin
 
 ![mockup two](wireframes/second-mockup.png)
 
+### Task List
+- Use `axios` to retrieve (`GET`) data from to `/gallery` and store it in `App.js`.
+- Create a new **component** for the `GalleryList` and pass it the gallery data stored in `App` via `props`.
+    - Iterate (loop over) the list of gallery data
+    - Display all of the images on the screen.
+- Create a new **component** called `GalleryItem.js` and pass it the individual gallery item via `props`. 
+    - Update the `GalleryList` to use this component to display an image.
+    - Swap the image with the description on click. Use [conditional rendering](https://reactjs.org/docs/conditional-rendering.html).
+    - Display the number likes for each item and include a like button.
+    - When the like button is clicked, use `Axios` to update (`PUT`) the like count `/gallery/like/:id`.
+    - Update the gallery each time a like button is clicked.
+
+
+
 ## STRETCH GOALS
 
-## Git Branching
+### Use Git Branching
 
 For each `feature` of your application, make a branch, work on the branch, and then merge it into master with `git merge --no-ff`. Feel free to work on the features in any order you like. You should be making branches for whatever feature you are working on.
 
 **Do not start on stretch goals until ALL of base mode is complete. Some of these will require additional research.**
 
+### Features
 
 - Move the data into a database (postgresql)
     - name your database `react_gallery`
