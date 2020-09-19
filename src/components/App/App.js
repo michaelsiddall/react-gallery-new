@@ -1,15 +1,22 @@
 import Axios from 'axios';
 import React, { Component } from 'react';
 import './App.css';
+import GalleryList from "../GalleryList/GalleryList";
+import GallleryItem from "../GalleryItem/GalleryItem";
 
 class App extends Component {
+  state = {
+    gallery: []
+    //end state
+  }
 
   componentDidMount() {
     console.log("App is ready to do things");
     this.getPicts();
-  }
+  } // end componentDidMOunt
 
   getPicts = () => {
+    //GET items from server via AXIOS
     Axios({
       method: 'GET',
       url: '/gallery'
@@ -33,9 +40,9 @@ class App extends Component {
           <h1 className="App-title">Gallery of my life</h1>
         </header>
         <br />
-        <p>Gallery goes here</p>
-        <img src="images/goat_small.jpg" />
-
+        <GalleryList gallery={this.state.gallery} />
+        < img src="images/goat_small.jpg" />
+        <pre>{JSON.stringify(this.state.gallery)}</pre>
       </div>
     );
   }
