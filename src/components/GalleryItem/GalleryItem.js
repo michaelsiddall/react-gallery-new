@@ -1,16 +1,35 @@
 import React, { Component } from 'react';
 
 class GalleryItem extends Component {
-    componentDidMount() {
-        console.log('in GalleryItem componentDidMount');
-    } // end componentDidMount
+    state = {
+        showDescription: false
+    }
+
+    handleClick = () => {
+        console.log('in handleClick',);
+        this.setState({
+            showDescription: !this.state.showDescription
+        })
+
+    }
 
     render() {
-        return (
-            <table>
-                <tr><img src={this.props.galleryItem.path} /></tr>
-            </table >
-        ); // end return
+        //conditional rendering based on state.showDescription
+        if (this.state.showDescription) {
+            return (
+
+                <li onClick={this.handleClick}>{this.props.galleryItem.description}</li>
+            )//end return
+        } // end if statement
+        else {
+            return (
+                <li onClick={this.handleClick}><img src={this.props.galleryItem.path} />
+                </li>
+            )
+        }
+
+
+
     } // end render
 } // end class
 
