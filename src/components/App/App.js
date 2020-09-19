@@ -41,8 +41,9 @@ class App extends Component {
         </header>
         <br />
         <GalleryList gallery={this.state.gallery} />
-        < img src="images/goat_small.jpg" />
-        <pre>{JSON.stringify(this.state.gallery)}</pre>
+
+        {/* < img src="images/goat_small.jpg" />
+        <pre>{JSON.stringify(this.state.gallery)}</pre> */}
       </div>
     );
   }
