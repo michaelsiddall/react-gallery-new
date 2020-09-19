@@ -11,12 +11,11 @@ class GalleryList extends Component {
             <div>
                 <h1>Check out these cute kids!</h1>
 
-                <ul>{this.props.gallery.map((galleryItem) =>
-                    <GalleryItem thisGalleryItem={galleryItem} key={galleryItem.id} id={galleryItem.id} title={galleryItem.title}
-                        description={galleryItem.description} path={galleryItem.path} />
+                <div>{this.props.gallery.map((galleryItem) =>
+                    <GalleryItem key={galleryItem.id} galleryItem={galleryItem} />
                 )}
 
-                </ul>
+                </div>
 
             </div >
         ); // end return
