@@ -1,6 +1,4 @@
-# Project Name
-
-React Gallery
+## React Gallery
 
 ## Description
 
@@ -8,8 +6,7 @@ This project allows the user to add pictures to a gallery. This gallery will be 
 
 ## Screen Shot
 
-A gif is available here to view what the app should look like when complete
-https://i.gyazo.com/3ef7bd1ec3046d3db91ac80ec72973d1.gif
+<a href="https://gyazo.com/3ef7bd1ec3046d3db91ac80ec72973d1"><img src="https://i.gyazo.com/3ef7bd1ec3046d3db91ac80ec72973d1.gif" alt="Image from Gyazo" width="1000"/></a>
 
 ## Prerequistes
 
