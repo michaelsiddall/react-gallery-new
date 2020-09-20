@@ -6,9 +6,12 @@ class GalleryItem extends Component {
     likes: 0,
   };
 
-  onIncreaseLike = () => {
-    console.log('you clicked "LIKE"');
-  };
+  // onIncreaseLike = () => {
+  //   console.log('you clicked "LIKE"');
+  //   this.setState({
+  //     likes: this.state.likes + 1,
+  //   });
+  // };
 
   //setting new state when image clicked
   imageClick = () => {
@@ -22,17 +25,23 @@ class GalleryItem extends Component {
     if (this.state.showDescription) {
       return (
         <div>
-          <p onClick={this.imageClick}>{this.props.galleryItem.description} </p>
-          <button onClick={this.onIncreaseLike}>Like Me</button>
+          <p onClick={this.imageClick}>{this.props.description} </p>
+          <button onClick={() => this.props.onLike(this.props.id)}>
+            Like Me
+          </button>
+
+          <div>Likes: {this.props.likes}</div>
         </div>
       ); //end return
     } // end showDescription
     else {
       return (
-        // <img src onClick={this.imageClick}>{}>
         <div>
-          <img src={this.props.galleryItem.path} onClick={this.imageClick} />
-          <button onClick={this.onIncreaseLike}>Like Me</button>
+          <img src={this.props.path} onClick={this.imageClick} />
+          <button onClick={() => this.props.onLike(this.props.id)}>
+            Like Me
+          </button>
+          <div>Likes: {this.props.likes}</div>
         </div>
       ); //end return
     } // end !showDescription

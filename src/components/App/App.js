@@ -1,14 +1,14 @@
-import Axios from 'axios';
-import React, { Component } from 'react';
-import './App.css';
+import Axios from "axios";
+import React, { Component } from "react";
+import "./App.css";
 import GalleryList from "../GalleryList/GalleryList";
-import GalleryItem from "../GalleryItem/GalleryItem";
 
 class App extends Component {
   state = {
-    gallery: []
+    gallery: [],
+
     //end state
-  }
+  };
 
   componentDidMount() {
     console.log("App is ready to do things");
@@ -18,8 +18,8 @@ class App extends Component {
   getPicts = () => {
     //GET items from server via AXIOS
     Axios({
-      method: 'GET',
-      url: '/gallery'
+      method: "GET",
+      url: "/gallery",
     })
       .then((response) => {
         console.log("response", response);
@@ -33,6 +33,22 @@ class App extends Component {
         console.error(err);
       });
   };
+
+  onLike = (galleryItem) => {
+    Axios({
+      method: "PUT",
+      url: `gallery/like/${galleryItem}`,
+    })
+      .then((response) => {
+        console.log("back from PUT:", response);
+        this.getPicts();
+      })
+      .catch((err) => {
+        console.error(err);
+        alert("Could not add to counter");
+      }); //end axios
+  };
+
   render() {
     return (
       <div className="App">
@@ -40,10 +56,11 @@ class App extends Component {
           <h1 className="App-title">Gallery of my life</h1>
         </header>
         <br />
-        <GalleryList gallery={this.state.gallery} />
-
-        {/* < img src="images/goat_small.jpg" />
-        <pre>{JSON.stringify(this.state.gallery)}</pre> */}
+        <GalleryList
+          onLike={this.onLike}
+          id={this.state.gallery.id}
+          gallery={this.state.gallery}
+        />
       </div>
     );
   }
