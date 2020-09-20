@@ -3,15 +3,7 @@ import React, { Component } from "react";
 class GalleryItem extends Component {
   state = {
     showDescription: false,
-    likes: 0,
   };
-
-  // onIncreaseLike = () => {
-  //   console.log('you clicked "LIKE"');
-  //   this.setState({
-  //     likes: this.state.likes + 1,
-  //   });
-  // };
 
   //setting new state when image clicked
   imageClick = () => {
@@ -25,23 +17,37 @@ class GalleryItem extends Component {
     if (this.state.showDescription) {
       return (
         <div>
-          <p onClick={this.imageClick}>{this.props.description} </p>
-          <button onClick={() => this.props.onLike(this.props.id)}>
-            Like Me
+          <p className="description" onClick={this.imageClick}>
+            {this.props.description}{" "}
+          </p>
+          <button
+            className="button"
+            onClick={() => this.props.onLike(this.props.id)}
+          >
+            Like Me!
           </button>
 
-          <div>Likes: {this.props.likes}</div>
+          <div className="likes">
+            Liked <strong>{this.props.likes}</strong> times
+          </div>
         </div>
       ); //end return
     } // end showDescription
     else {
       return (
         <div>
-          <img src={this.props.path} onClick={this.imageClick} />
-          <button onClick={() => this.props.onLike(this.props.id)}>
-            Like Me
+          <div className="galleryItems">
+            <img src={this.props.path} onClick={this.imageClick} />
+          </div>
+          <button
+            className="button"
+            onClick={() => this.props.onLike(this.props.id)}
+          >
+            Like Me!
           </button>
-          <div>Likes: {this.props.likes}</div>
+          <div className="likes">
+            Liked <strong>{this.props.likes}</strong> times
+          </div>
         </div>
       ); //end return
     } // end !showDescription

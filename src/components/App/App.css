@@ -3,14 +3,14 @@
 }
 
 .App-header {
-  background-color: #222;
+  background-color: #ccd285;
   height: 70px;
   padding: 20px;
   color: white;
 }
 
 .App-title {
-  font-size: 1.5em;
+  font-size: 2.5em;
 }
 
 .App-intro {
@@ -18,6 +18,13 @@
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+body {
+  background: #aad285;
 }

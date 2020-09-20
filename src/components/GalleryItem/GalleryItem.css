@@ -1,0 +1,29 @@
+.galleryItems {
+  border: 2px solid black;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin: 10px;
+  height: 267px;
+}
+
+.description {
+  border: 2px solid black;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 30px;
+  text-align: center;
+  height: 267px;
+  width: 200px;
+  margin: 10px;
+}
+
+.button {
+  font-family: "Times New Roman", Times, serif;
+  margin: 10px;
+  background: #e5e8c9;
+  font-style: bold;
+  font-size: 18px;
+}
+
+.likes {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 20px;
+}

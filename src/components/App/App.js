@@ -2,6 +2,8 @@ import Axios from "axios";
 import React, { Component } from "react";
 import "./App.css";
 import GalleryList from "../GalleryList/GalleryList";
+import "../GalleryItem/GalleryItem.css";
+import "../GalleryList/GalleryList.css";
 
 class App extends Component {
   state = {
