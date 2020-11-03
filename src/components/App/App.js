@@ -37,6 +37,8 @@ class App extends Component {
   };
 
   onLike = (galleryItem) => {
+    console.log("onLike in App.js ID to like:", galleryItem);
+
     Axios({
       method: "PUT",
       url: `gallery/like/${galleryItem}`,
